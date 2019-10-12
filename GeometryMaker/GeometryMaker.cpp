@@ -13,25 +13,18 @@ int main()
 	do
 	{
 		cout << "===============================" << endl
-		<< "|| 欢迎使用几何生成器 By Tao ||" << endl
-		<< "||  A:方形  B:三角形  N.退出 ||" << endl
-		<< "===============================" << endl;
+			<< "|| 欢迎使用几何生成器 By Tao ||" << endl
+			<< "||  A:方形  B:三角形  N.退出 ||" << endl
+			<< "===============================" << endl;
 		cin >> l;
 		if (l == 65 || l == 97)
-		{
-			Square();
-		}
+		{Square();}
 		else if (l == 66 || l == 98)
-		{
-			Triangle();
-		}
+		{Triangle();}
 		else
-		{
-			cout << "更多图形正在开发中喔！" << endl;
-		}
+		{cout << "更多图形正在开发中喔！" << endl;}
 	} while (l != 78);
-	
-    return 0;
+	return 0;
 }
 //正方形生成器
 void Square()
@@ -86,12 +79,12 @@ void Triangle()
 		do
 		{
 			b = a - d; c = d;
-			while (b>0)
+			while (b>0)//开头的空格
 			{
 				cout << " ";
 				b--;
 			}
-			while (c>0)
+			while (c>0)//星号
 			{
 				cout << "* ";
 				c--;
