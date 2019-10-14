@@ -9,7 +9,7 @@ void Triangle();
 //主程序
 int main()
 {
-	char l;
+	char l,ch;
 	do
 	{
 		cout << "===============================" << endl
@@ -30,28 +30,30 @@ int main()
 void Square()
 {
 	int a = 0, b = 0, c = 0;
-	char ch = 89;
+	char ch = 89, t;
 	do
 	{
 		cout << "======================" << endl << "你要的正方形边长多大？" << endl;
 		cin >> a;
+		cout << "想要什么符号？(如:* @ #)" << endl;
+		cin >> t;
 		b = a;
 		c = a - 2;
 		while (b > 0)//顶边
 		{
-			cout << "* ";
+			cout << t << " ";
 			b--;
 		}
 		b = a - 1;
 		while (c > 0)//斜边
 		{
-			cout << endl << "* ";
+			cout << endl << t << " ";
 			while (b > 1)
 			{
 				cout << "  ";
 				b--;
 			}
-			cout << "*";
+			cout << t;
 			b = a - 1;
 			c--;
 		}
@@ -60,7 +62,7 @@ void Square()
 		cout << endl;
 		while (b > 1)
 		{
-			cout << "* ";
+			cout << t << " ";
 			b--;
 		}
 		cout << endl << "你要的正方形就在上面啦！" << endl << "还要再来一个吗？(Y/N)" << endl;
@@ -71,11 +73,13 @@ void Square()
 void Triangle()
 {
 	int a = 0, b = 0, c = 0, d = 1;
-	char ch = 89;
+	char ch = 89, t;
 	do
 	{
 		cout << "======================" << endl << "你要的三角形底长多大？" << endl;
 		cin >> a;
+		cout << "想要什么符号？(如:* @ #)" << endl;
+		cin >> t;
 		do
 		{
 			b = a - d; c = d;
@@ -86,7 +90,7 @@ void Triangle()
 			}
 			while (c>0)//星号
 			{
-				cout << "* ";
+				cout << t << " ";
 				c--;
 			}
 			cout << endl;
