@@ -1,0 +1,2 @@
+void Square();
+void Triangle();
