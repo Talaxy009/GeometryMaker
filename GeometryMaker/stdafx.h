@@ -9,7 +9,8 @@
 
 #include <stdio.h>
 #include <tchar.h>
-#include<iostream>
+#include <iostream>
+#include <cmath>
 using namespace std;
 
 

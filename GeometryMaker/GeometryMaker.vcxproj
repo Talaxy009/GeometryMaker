@@ -150,6 +150,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="CircleMaker.cpp" />
     <ClCompile Include="GeometryMaker.cpp" />
     <ClCompile Include="SquareMaker.cpp" />
     <ClCompile Include="stdafx.cpp">

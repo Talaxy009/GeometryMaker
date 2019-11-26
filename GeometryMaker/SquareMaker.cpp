@@ -3,43 +3,47 @@
 #include "stdafx.h"
 void Square()
 {
-	int a = 0, b = 0, c = 0;
+	int n = 0, i = 0, ii = 0;
 	char ch = 89, t;
 	do
 	{
 		cout << "======================" << endl << "你要的正方形边长多大？" << endl;
-		cin >> a;
+		cin >> n;
 		cout << "想要什么符号？(如:* @ #)" << endl;
 		cin >> t;
-		b = a;
-		c = a - 2;
-		while (b > 0)//顶边
+		i = n;
+		ii = n - 2;
+		cout << endl;
+		while (i > 0)//顶边
 		{
 			cout << t << " ";
-			b--;
+			i--;
 		}
-		b = a - 1;
-		while (c > 0)//斜边
+		i = n - 1;
+		while (ii > 0)//斜边
 		{
 			cout << endl << t << " ";
-			while (b > 1)
+			while (i > 1)
 			{
 				cout << "  ";
-				b--;
+				i--;
 			}
 			cout << t;
-			b = a - 1;
-			c--;
+			i = n - 1;
+			ii--;
 		}
-		if (a != 1) { b = a + 1; }//底边
-		else { b = a; }
 		cout << endl;
-		while (b > 1)
+		if (n != 1) //底边
 		{
-			cout << t << " ";
-			b--;
+			i = n; 
+			while (i > 0)
+			{
+				cout << t << " ";
+				i--;
+			}
+			cout << endl;
 		}
-		cout << endl << "你要的正方形就在上面啦！" << endl << "还要再来一个吗？(Y/N)" << endl;
+		cout << "你要的正方形就在上面啦！" << endl << "还要再来一个吗？(Y/N)" << endl;
 		cin >> ch;
 	} while (ch == 89 || ch == 121);
 }
